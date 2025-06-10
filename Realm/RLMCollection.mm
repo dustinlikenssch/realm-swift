@@ -213,7 +213,7 @@ NSUInteger RLMUnmanagedFastEnumerate(id collection, NSFastEnumerationState *stat
     if (state->state != 0) {
         return 0;
     }
-
+    // added fix for ios 26
     // We need to enumerate a copy of the backing array so that it doesn't
     // reflect changes made during enumeration. This copy has to be autoreleased
     // (since there's nowhere for us to store a strong reference), and uses
